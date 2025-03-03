@@ -1,0 +1,59 @@
+// Begin 9
+#include <iostream>
+using namespace std;
+
+int main() {
+    // Оголошення змінних для двох чисел
+    double a, b;
+
+    // Введення чисел
+    cout << "Введіть два ненульових числа: ";
+    cin >> a >> b;
+
+    // Перевірка на ненульовість другого числа для обчислення частки
+    if (b == 0) {
+        cout << "Число b не може бути нульовим для обчислення частки." << endl;
+        return 1;
+    }
+
+    // Обчислення квадратів чисел
+    double squareA = a * a;
+    double squareB = b * b;
+
+    // Обчислення суми, різниці, добутку та частки квадратів
+    double sum = squareA + squareB;
+    double difference = squareA - squareB;
+    double product = squareA * squareB;
+    double quotient = squareA / squareB;
+
+    // Виведення результатів
+    cout << "Сума квадратів: " << sum << endl;
+    cout << "Різниця квадратів: " << difference << endl;
+    cout << "Добуток квадратів: " << product << endl;
+    cout << "Частка квадратів: " << quotient << endl;
+
+// Begin 22
+    // Оголошення змінної для кута в радіанах
+    double alpha;
+
+    // Введення кута в радіанах
+    cout << "Введіть значення кута в радіанах (0 ≤ α < 2π): ";
+    cin >> alpha;
+
+    // Перевірка, що кут знаходиться в правильному діапазоні
+    if (alpha < 0 || alpha >= 2 * 3.14) {
+        cout << "Значення кута повинно бути в межах [0, 2π)." << endl;
+        return 1;
+    }
+
+    // Константа для числа π
+    const double PI = 3.14;
+
+    // Обчислення кута в градусах
+    double degrees = (alpha * 180) / PI;
+
+    // Виведення результату
+    cout << "Кут в градусах: " << degrees << endl;
+
+    return 0;
+}
